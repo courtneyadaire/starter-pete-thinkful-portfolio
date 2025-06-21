@@ -1,11 +1,11 @@
-/* The @import rule below imports the Playfair Display and Source Sans Pro fonts into the stylesheet*/
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@400&display=swap");
 
 body {
   background-color: #eae2b7;
   color: #003049;
   font-family: "Source Sans Pro", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 /* Headings */
@@ -13,19 +13,51 @@ h1,
 h2,
 h3 {
   font-family: "Playfair Display", Times, serif;
+  margin: 0;
   text-align: center;
 }
 
 /* Header */
 header {
-  text-align: center;
+  background-color: #eae2b7;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #d62828;
+  text-decoration: underline;
+}
+
+nav a:hover {
+  color: #f77f00;
 }
 
 /* Containers */
 div {
   background-color: #eae2b7;
   margin: auto;
-  width: 600px;
+  width: 800px;
 }
 
 article {
@@ -51,10 +83,6 @@ a:hover {
   color: #f77f00;
 }
 
-nav a {
-  padding-left: 20px;
-}
-
 /* Images */
 img {
   width: 100%;
@@ -70,9 +98,71 @@ img {
 /* Footer */
 footer {
   text-align: center;
+  padding-top: 40px;
 }
 
-/* Other page elements */
+/* Horizontal Rule */
 hr {
   border: 1px solid black;
 }
+
+/* About Section Layout */
+.about-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.about-image {
+  flex: 0 0 200px;
+  text-align: center;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.about-text p,
+.about-text ul {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.about-bottom {
+  margin-top: 40px;
+}
+
+/* Portfolio Section */
+#portfolio h2 {
+  margin-bottom: 30px;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.portfolio-grid section {
+  flex: 1;
+  text-align: center;
+}
+
+.portfolio-grid section img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.portfolio-grid section p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
